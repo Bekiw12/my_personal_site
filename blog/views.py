@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import User, Skills, About, Accomplishments
 from .forms import ContactMeForm
 from django.core.mail import send_mail
