@@ -129,8 +129,8 @@ EMAIL_HOST = 'smtp.mail.yahoo.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'bekiwnamazov12@yahoo.com'
 EMAIL_HOST_PASSWORD = 'zfkbaaxajjqdnzhf'
-EMAIL_USE_TLS = 'False'
-EMAIL_USE_SSL = 'True'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static')
