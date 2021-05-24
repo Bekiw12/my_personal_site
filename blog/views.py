@@ -16,6 +16,7 @@ def index(request):
             email = form.cleaned_data['email']
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
+            email_message = f"Имя: {name}\n\nЭл.почта: {email}\n\nСообщение: {message}"
             print(f'{name} - {email} - {subject} - {message}')
             send_mail(subject, email_message, 'bekiwnamazov12@yahoo.com', recipient_list=['bekiwnamazov12@yahoo.com'], fail_silently=False)
             return redirect('index')
