@@ -3,11 +3,12 @@ from .models import User, Skills, About, Accomplishments
 from .forms import ContactMeForm
 from django.core.mail import send_mail
 
+
 def index(request):
     # form = ContactMeForm()
     user = User.objects.get(id=1)
     user_skills = user.skills.all()
-    about = About.objects.get(id=1)
+    about = About.objects.get(id=2)
     accomp = Accomplishments.objects.all()
     if request.method == 'POST':
         form = ContactMeForm(request.POST)
