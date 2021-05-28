@@ -7,7 +7,7 @@ def index(request):
     # form = ContactMeForm()
     user = User.objects.get(id=1)
     user_skills = user.skills.all()
-    about = About.objects.get(id=2)
+    about = About.objects.get(id=1)
     accomp = Accomplishments.objects.all()
     if request.method == 'POST':
         form = ContactMeForm(request.POST)
