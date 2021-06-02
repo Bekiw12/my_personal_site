@@ -1,14 +1,14 @@
 from django.db import models
 
-class User(models.Model):
+class BlogUser(models.Model):
     image = models.ImageField(upload_to='pictures', blank=True)
     name = models.CharField(max_length=200)
     short_description = models.CharField(max_length=500)
     skills = models.ManyToManyField('Skills')
 
     class Meta():
-        verbose_name_plural = "Users"
-        verbose_name = "User"
+        verbose_name_plural = "Blog Users"
+        verbose_name = "Blog User"
 
     def __str__(self):
         return self.name

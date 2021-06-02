@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect
-from .models import User, Skills, About, Accomplishments
+from .models import BlogUser, Skills, About, Accomplishments
 from .forms import ContactMeForm
 from django.core.mail import send_mail
 
 
 def index(request):
     # form = ContactMeForm()
-    user = User.objects.get(id=1)
-    user_skills = user.skills.all()
+    bloguser = BlogUser.objects.get(id=1)
+    user_skills = bloguser.skills.all()
     about = About.objects.get(id=2)
     accomp = Accomplishments.objects.all()
     if request.method == 'POST':
@@ -25,7 +25,7 @@ def index(request):
         form = ContactMeForm()
 
     context = {
-        'user': user,
+        'user': bloguser,
         'skills': user_skills,
         'info': about,
         'ac': accomp,
