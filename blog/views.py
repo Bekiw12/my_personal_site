@@ -6,8 +6,8 @@ from django.core.mail import send_mail
 
 def index(request):
     # form = ContactMeForm()
-    bloguser = BlogUser.objects.get(id=1)
-    user_skills = bloguser.skills.all()
+    us = BlogUser.objects.get(id=1)
+    user_skills = us.skills.all()
     about = About.objects.get(id=2)
     accomp = Accomplishments.objects.all()
     if request.method == 'POST':
@@ -25,7 +25,7 @@ def index(request):
         form = ContactMeForm()
 
     context = {
-        'bloguser': bloguser,
+        'bloguser': us,
         'skills': user_skills,
         'info': about,
         'ac': accomp,
