@@ -25,7 +25,7 @@ def index(request):
         form = ContactMeForm()
 
     context = {
-        'user': bloguser,
+        'bloguser': bloguser,
         'skills': user_skills,
         'info': about,
         'ac': accomp,

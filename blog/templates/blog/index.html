@@ -17,9 +17,9 @@
 
 			<section id="header">
 				<header>
-					<span class="image avatar"><img src="{% if user.image %}{{ user.image.url }}{% else %}{% static 'images/avatar.jpg' %}{% endif %}" alt="" /></span>
-					<h1 id="logo"><a href="#">{{ user.name }}</a></h1>
-					<p>{{ user.short_description }}</p>
+					<span class="image avatar"><img src="{% if bloguser.image %}{{ bloguser.image.url }}{% else %}{% static 'images/avatar.jpg' %}{% endif %}" alt="" /></span>
+					<h1 id="logo"><a href="#">{{ bloguser.name }}</a></h1>
+					<p>{{ bloguser.short_description }}</p>
 				</header>
 				<nav id="nav">
 					<ul>
