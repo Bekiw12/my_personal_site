@@ -133,7 +133,7 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static'),
 )
 
 # Default primary key field type
